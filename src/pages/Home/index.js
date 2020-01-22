@@ -21,7 +21,7 @@ function Home() {
         }
     }, [fetchPokemons]);
 
-    const loadMore = async url => {
+    const loadMore = url => {
         setUrl(url);
     };
 
@@ -44,7 +44,7 @@ function Home() {
                                     </PokedexListLink>
                                 </PokedexListItem>
                             ))}
-                            <LoadMore onClick={() => loadMore(next)}>Load more</LoadMore>
+                            {next && <LoadMore onClick={() => loadMore(next)}>Load more</LoadMore>}
                         </PokedexList>
                     </PokedexScreen>
                 </Pokedex>

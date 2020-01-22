@@ -28,8 +28,10 @@ function Info({ match: { params: { name } }, history }) {
     return (
         <Container>
             <button onClick={() => history.goBack()}>Back</button>
+            <hr />
             <h1>{pokemonName}</h1>
             <img src={sprites.front_default} alt={pokemonName} />
+            <p>Work in progress!</p>
         </Container>
     )
 }
